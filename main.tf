@@ -1,6 +1,21 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "4.49.0"
+    }
+  }
+  backend "azurerm" {
+    resource_group_name  = "backend-rg"
+    storage_account_name = "backendstrg"
+    container_name       = "santcontainer"
+    key                  = "agent.terraform.tfstate"
+  }
+}
+
 provider "azurerm" {
   features {}
-  subscription_id = ""
+  subscription_id = "fa3325aa-2291-472e-9d80-68f554038ffc"
 }
 
 resource "azurerm_resource_group" "rg" {
