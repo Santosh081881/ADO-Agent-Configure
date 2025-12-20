@@ -13,3 +13,9 @@ variable "agent_pool" {
   description = "Agent pool name"
   type        = string
 }
+
+variable "admin_password" {
+  description = "VM admin password"
+  type        = string
+  sensitive   = true
+}
