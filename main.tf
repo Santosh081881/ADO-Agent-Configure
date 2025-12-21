@@ -152,7 +152,6 @@ resource "azurerm_linux_virtual_machine" "agent_vm" {
   provisioner "remote-exec" {
     inline = [
       "chmod +x /home/santosh/agent.sh",
-      "/home/santosh/agent.sh"
     ]
   }
 }
