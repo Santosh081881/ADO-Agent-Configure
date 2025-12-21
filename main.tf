@@ -136,9 +136,22 @@ resource "azurerm_linux_virtual_machine" "agent_vm" {
       agent_name  = "agent-${random_string.suffix.result}"
     })
   )
+
+  provisioner "file" {
+    source      = "agent.sh"
+    destination = "/home/santosh/agent.sh"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "chmod +x /home/santosh/agent.sh",
+      "sudo /home/santosh/agent.sh"
+    ]
+  }
 }
 
 resource "random_string" "suffix" {
   length  = 4
   special = false
 }
+
