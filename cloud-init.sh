@@ -4,11 +4,6 @@ set -euxo pipefail
 LOG=/var/log/ado-agent-bootstrap.log
 exec > >(tee -a $LOG) 2>&1
 
-ADO_PAT="1u0jWQXKWwyweOEDP7AYZRgkWq5FzNNHdTdBDSQcuMEe4vhnMLjYJQQJ99BLACAAAAAAAAAAAAASAZDO2bDA"
-ADO_ORG_URL="${ado_org_url}"
-AGENT_POOL="${agent_pool}"
-AGENT_NAME="${agent_name}"
-
 apt update -y
 apt install -y curl unzip zip git ca-certificates gnupg lsb-release
 
@@ -36,11 +31,11 @@ curl -O https://download.agent.dev.azure.com/agent/4.266.2/vsts-agent-linux-x64-
 tar zxvf vsts-agent-linux-x64-4.266.2.tar.gz
 
 ./config.sh --unattended \
-  --url "$ADO_ORG_URL" \
+  --url "https://dev.azure.com/santosh1808" \
   --auth pat \
-  --token "$ADO_PAT" \
-  --pool "$AGENT_POOL" \
-  --agent "$AGENT_NAME" \
+  --token "1u0jWQXKWwyweOEDP7AYZRgkWq5FzNNHdTdBDSQcuMEe4vhnMLjYJQQJ99BLACAAAAAAAAAAAAASAZDO2bDA" \
+  --pool "MyPool" \
+  --agent "ado-agent" \
   --acceptTeeEula
 EOF
 
