@@ -4,7 +4,7 @@ set -euo pipefail
 ORG_URL="https://dev.azure.com/santosh1808"
 AGENT_POOL="MyPool"
 AGENT_NAME="ado-agent"
-ADO_PAT=""
+ADO_PAT="ArjJQYKa6j6abahmRSzpRmG7ZxjQvYfGlYjM2XiJW6Zxo8KAt4kJJQQJ99BLACAAAAAAAAAAAAASAZDO4Vbn"
 
 AGENT_DIR="/home/santosh/ado-agent"
 SERVICE_NAME="vsts.agent.santosh1808.MyPool.ado-agent"
