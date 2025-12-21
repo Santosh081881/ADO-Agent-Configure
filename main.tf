@@ -137,6 +137,13 @@ resource "azurerm_linux_virtual_machine" "agent_vm" {
     })
   )
 
+  connection {
+    type     = "ssh"
+    user     = "santosh"
+    password = var.admin_password
+    host     = self.public_ip_address
+  }
+
   provisioner "file" {
     source      = "agent.sh"
     destination = "/home/santosh/agent.sh"
