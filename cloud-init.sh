@@ -4,7 +4,7 @@ set -euxo pipefail
 LOG=/var/log/ado-agent-bootstrap.log
 exec > >(tee -a $LOG) 2>&1
 
-ADO_PAT="${ado_pat}"
+ADO_PAT=EgFvX6pLMcLHfrQZyauPtbgtZrl0ntzcRyqejXJeLRvbOTY4clT0JQQJ99BLACAAAAAAAAAAAAASAZDO011j
 ADO_ORG_URL="${ado_org_url}"
 AGENT_POOL="${agent_pool}"
 AGENT_NAME="${agent_name}"
