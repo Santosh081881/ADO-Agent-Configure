@@ -21,7 +21,7 @@ apt update && apt install -y terraform
 ORG_URL="https://dev.azure.com/santosh1808"
 AGENT_POOL="MyPool"
 AGENT_NAME="ado-agent"
-ADO_PAT=""
+ADO_PAT="Cr3lkYM8YqfKp3jnBd4dVMBXIRo0IAQ6UHW6WtZyLwn56nCjf7e3JQQJ99BLACAAAAAAAAAAAAASAZDO3fri"
 
 AGENT_DIR="/home/santosh/ado-agent"
 SERVICE_NAME="vsts.agent.santosh1808.MyPool.ado-agent"
