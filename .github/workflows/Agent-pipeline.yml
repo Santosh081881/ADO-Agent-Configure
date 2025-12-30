@@ -11,6 +11,8 @@ on:
           - apply
           - destroy
 
+run-name: Terraform is trying to ${{ inputs.action }} by @${{ github.actor }}
+
 permissions:
   id-token: write
   contents: read
